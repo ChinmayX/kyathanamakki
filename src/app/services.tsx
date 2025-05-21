@@ -29,7 +29,7 @@ export default function Services() {
 
   return (
     <section className="py-16 bg-amber-50 text-center">
-      <h2 className="text-4xl font-bold text-amber-900 mb-8">Our Services</h2>
+      <h2 className="text-6xl font-bold text-amber-900 mb-8">Our Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
         {services.map((service) => (
           <div
@@ -37,10 +37,10 @@ export default function Services() {
             className=" rounded-2xl p-6 hover:shadow-xl transition"
           >
             <div className="text-5xl mb-4">{service.icon}</div>
-            <h3 className="text-2xl font-semibold text-amber-800 mb-2">
+            <h3 className="text-4xl font-semibold text-amber-800 mb-2">
               {service.title}
             </h3>
-            <p className="text-amber-700 text-sm">{service.description}</p>
+            <p className="text-amber-700 text-xl">{service.description}</p>
           </div>
         ))}
       </div>

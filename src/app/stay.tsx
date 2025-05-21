@@ -15,11 +15,13 @@ const images = [
 
 export default function StaySection() {
   return (
-    <section className="w-full flex flex-col md:flex-row items-center justify-between bg-white">
+    <section className="w-full flex flex-col md:flex-row items-center justify-between bg-amber-50">
       {/* Left Side */}
       <div className="w-full p-20 md:w-1/2 mb-10 md:mb-0">
-        <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
-          Stay
+        <h2
+          className={`text-4xl md:text-5xl font-semibold text-amber-800 mb-4 `}
+        >
+          <i>STAYS</i>
         </h2>
         <p className="text-lg md:text-xl text-gray-600">
           Experience unmatched comfort and elegance. Our luxury homestays are

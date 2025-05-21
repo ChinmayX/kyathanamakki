@@ -4,6 +4,8 @@ import StaySection from "./stay";
 import Services from "./services";
 import TestimonialCarousel from "./testi";
 
+import { instrumentSerif } from "./layout";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
@@ -18,7 +20,9 @@ export default function Home() {
           className="z-0"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1
+            className={`text-4xl md:text-6xl font-bold ${instrumentSerif.className}`}
+          >
             Kyathanamakki Homestay
           </h1>
           <p className="mt-4 text-lg md:text-2xl">Escape to Nature's Lap</p>
@@ -31,15 +35,15 @@ export default function Home() {
       </section>
 
       <StaySection />
-      <Services />
-      <TestimonialCarousel />
 
-      <section className="bg-black pt-20">
-        <div className="p-20 text-white">
-          <h1 className="text-4xl font-bold">
+      <section className="bg-amber-100 pt-20">
+        <div className="p-20 text-amber-800">
+          <h1 className={`text-6xl font-bold  ${instrumentSerif.className}`}>
             <i>EXPERIENCES</i>
           </h1>
-          <p className="text-lg text-gray-700">
+          <p
+            className={`text-2xl text-black opacity-70 ${instrumentSerif.className}`}
+          >
             Immerse yourself in the beauty of nature with our curated
             experiences.
             <br />
@@ -89,13 +93,23 @@ export default function Home() {
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-8 text-white">
-                <h3 className="text-xl font-semibold">{exp.title}</h3>
-                <p className="text-sm">{exp.description}</p>
+                <h3
+                  className={`text-4xl font-semibold ${instrumentSerif.className}`}
+                >
+                  {exp.title}
+                </h3>
+                <p
+                  className={`text-lg text-white opacity-70 ${instrumentSerif.className}`}
+                >
+                  <i>{exp.description}</i>
+                </p>
               </div>
             </div>
           ))}
         </div>
       </section>
+      <Services />
+      <TestimonialCarousel />
     </main>
   );
 }
