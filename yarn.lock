@@ -672,6 +672,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"iconoir-react@npm:^7.11.0":
+  version: 7.11.0
+  resolution: "iconoir-react@npm:7.11.0"
+  peerDependencies:
+    react: 18 || 19
+  checksum: 10c0/148a5790daba022e0ea6fa7891dc0fe65e20f90738007d6ce01153d1b9673e4ddd38067eb9cab4888a0ab232fec00fbf98178351c9b0423fa8ebc8ebb1b0ff0f
+  languageName: node
+  linkType: hard
+
 "is-arrayish@npm:^0.3.1":
   version: 0.3.2
   resolution: "is-arrayish@npm:0.3.2"
@@ -696,6 +705,7 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
+    iconoir-react: "npm:^7.11.0"
     next: "npm:15.3.2"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"

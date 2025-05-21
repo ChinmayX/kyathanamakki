@@ -5,27 +5,41 @@ import Services from "./services";
 import TestimonialCarousel from "./testi";
 
 import { instrumentSerif } from "./layout";
+import Footer from "./footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative h-screen w-full">
-        <Image
-          src="/hero.jpg"
-          alt="Kyathanamakki Homestay"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="z-0"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-          <h1
-            className={`text-4xl md:text-6xl font-bold ${instrumentSerif.className}`}
-          >
-            Kyathanamakki Homestay
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-[0.4]"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/Video-822.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20">
+          <img
+            src="/logo.png"
+            alt="Kyathanamakki Homestay Logo"
+            className="h-28 filter brightness-150 contrast-90"
+          />
+        </div>
+
+        {/* Hero Text and CTA */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 text-center px-4">
+          <h1 className="text-5xl md:text-7xl opacity-80 font-bold">
+            <i>In the heart of Kyathanamakki</i>
           </h1>
-          <p className="mt-4 text-lg md:text-2xl">Escape to Nature's Lap</p>
+          <p className="mt-4 text-lg opacity-40 md:text-2xl">
+            Escape to Nature's Lap
+          </p>
           <Link href="#contact">
             <button className="mt-6 px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full text-white font-semibold">
               Book Now
@@ -110,6 +124,7 @@ export default function Home() {
       </section>
       <Services />
       <TestimonialCarousel />
+      <Footer />
     </main>
   );
 }
