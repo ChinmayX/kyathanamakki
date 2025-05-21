@@ -4,7 +4,6 @@ import StaySection from "./stay";
 import Services from "./services";
 import TestimonialCarousel from "./testi";
 
-import { instrumentSerif } from "./layout";
 import Footer from "./footer";
 
 export default function Home() {
@@ -52,12 +51,10 @@ export default function Home() {
 
       <section className="bg-amber-100 pt-20">
         <div className="p-20 text-amber-800">
-          <h1 className={`text-6xl font-bold  ${instrumentSerif.className}`}>
+          <h1 className={`text-6xl font-bold `}>
             <i>EXPERIENCES</i>
           </h1>
-          <p
-            className={`text-2xl text-black opacity-70 ${instrumentSerif.className}`}
-          >
+          <p className={`text-2xl text-black opacity-70`}>
             Immerse yourself in the beauty of nature with our curated
             experiences.
             <br />
@@ -107,14 +104,8 @@ export default function Home() {
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-8 text-white">
-                <h3
-                  className={`text-4xl font-semibold ${instrumentSerif.className}`}
-                >
-                  {exp.title}
-                </h3>
-                <p
-                  className={`text-lg text-white opacity-70 ${instrumentSerif.className}`}
-                >
+                <h3 className={`text-4xl font-semibold`}>{exp.title}</h3>
+                <p className={`text-lg text-white opacity-70`}>
                   <i>{exp.description}</i>
                 </p>
               </div>
